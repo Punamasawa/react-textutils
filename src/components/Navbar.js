@@ -25,7 +25,7 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link" aria-current="page" to="/">
                 Home
               </Link>
             </li>
@@ -46,6 +46,12 @@ export default function Navbar(props) {
               Search
             </button>
           </form>
+          <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              style={{ height: "30px", width: "30px" }}
+            ></div>
+          </div>
           <div className="form-check form-switch mx-3">
             <input
               className="form-check-input"
@@ -54,6 +60,7 @@ export default function Navbar(props) {
               role="switch"
               id="flexSwitchCheckDefault"
             />
+
             <label
               className={`form-check-label text-${
                 props.mode === "light" ? "dark" : "light"
